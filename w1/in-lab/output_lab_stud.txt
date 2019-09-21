@@ -1,0 +1,30 @@
+Script started on Fri 13 Sep 2019 10:56:11 AM EDT
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+1: ws
+2: Welcome
+3: to
+4: C++!
+
+------------------
+Global variable:
+------------------
+Old Value: 3
+New Value: 4
+------------------
+
+------------------
+Processing:
+------------------
+1: Wel
+2: to
+3: C++
+------------------
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Fri 13 Sep 2019 10:56:11 AM EDT
