@@ -1,0 +1,77 @@
+// Name: Nicholas Defranco
+// Seneca Student ID: 106732183
+// Seneca email: ndefranco@myseneca.ca
+// Date of completion: Tuesday, October 8th, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+	In this workshop, I learned how create a class that has contains a 
+composition. A composition involves complete ownership of another 
+class. The composer type is responsible for managing the composing 
+type. This means the composing type must contain the value of an one 
+or more objects of the composing type either dynamically allocated 
+or statically allocated. In this assignment, the composer manages a 
+dynamic array of the composing type (the statically allocated 
+resource instance pointer points to a resource allocated off the heap, 
+which was done in this assignment). In this case, construction 
+involves allocating sufficient memory, and then invoking the desired 
+constructor and/or copy assignment operator, to set the array of the 
+objects in a desired state.
+
+(descriptions of destructor, copy operators, and move operators, assume 
+the class manages dynamic memory as the class in the assignment did).
+
+	(Destruction in composition relationship) During the destruction 
+process, the composing type must be destructed. The memory associated with 
+the dynamic array of composing type must be deallocated with the delete 
+expression. 
+
+	(Copying in composition relationship) To copy the contents of an 
+object with a composition relationship, the memory associated with the 
+composing type within the current object must be deallocated with the delete 
+expression. Memory is then reallocated for the composing type to be able to 
+store the same amount of objects of composing type as the right operand. 
+Finally, a deep copy is performed to copy the objects stored in the right 
+operand to the current object. 
+
+	Furthermore, I learned how to create a class that contains an 
+aggregation. An aggregation is a relationship where the class is composed 
+of objects of another type that it does not manage. That is, it does not 
+contain the value of an object that it makes use of. This means the class 
+must contain a pointer or an array of pointers (either statically or 
+dynamically allocated). Each pointer holds the address of an object that is 
+is being managed outside of the class or the value nullptr. If the class 
+manages an array of pointers, sufficient memory must be allocated to the 
+array be able to store addresses of incoming objects from the client. 
+
+	(Destructor in aggregation relationship) During the destruction 
+process of an aggregator type, memory associated to the array of pointers 
+must be deallocated. This memory only includes the memory allocated to 
+store the addresses of objects, not the objects themselves.
+
+	(Copying in aggregation relationship) The logic is similar to the 
+copying process between objects that contain another type(composition). 
+Differences include: 
+- memory associated with the array of pointers itself is deallocated 
+	(not objects the elements point to)
+- memory is allocated to store an array of pointers.
+- the deep copy process involves copying addresses of objects and not 
+	the objects themselves.
+
+	The logic between the move operators in a composition and an 
+aggregation is very similar to each other. All members are shallow copied. 
+In composition, the address of the dynamic array holding composing objects 
+is copied to the current object. In aggregation, the address of the dynamic 
+array holding addresses of aggregatee types is copied to the current object. 
+Regardless of what the address points to, the copying operation of addresses 
+is the same (all pointer types take up the same amount of memory in RAM).
+	
+
+Quiz reflection
+
+I got 11/10
+
+
+
+

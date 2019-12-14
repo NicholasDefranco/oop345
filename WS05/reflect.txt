@@ -1,0 +1,112 @@
+// Name: Nicholas Defranco
+// Seneca Student ID: 106732183
+// Seneca email: ndefranco@myseneca.ca
+// Date of completion: Friday, October 18th, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+	In this workshop, I have learned how to use lambda expressions. A
+lambda expression is an entity of function type that is nested within
+the body of another function. Similar to any other function type, it
+specifies a parameter list denoted by the () and a definition(or body
+of the function type) enclosed with {}. Lambda expressions are unique
+as there is no identifier associated with a lambda expression. Lambda
+expressions can access variables in the scope of the function that they
+are nested within as long as the variable has automatic storage
+duration. Variables the lambda expression wishes to access are
+specified within the capture list denoted by the []. Variables can
+either be accessed(captured) by reference(changes to the variable
+within the lambda change the original) or by value (the value of the
+variable is copied to be used within the lambda). (it’s
+utilization/implementation, question 1) A lambda expression defines 
+a function that is to be only ever meant to be used in that localized region 
+within the source code. That is, if a function is only ever used once to be 
+called back (the function is only used to pass to another function) or if
+logic is repeated multiple times in the same function (and that logic
+is not likely going to be used elsewhere, outside of the module), a
+lambda is an excellent alternative to the other function types. 
+
+	I have also learned about another function type known as a
+function object but more commonly known as a functor. A functor
+is a instance of a class that overloads the function call
+operator. Since a functor is a instance of a class, it can
+store information. This allows the client code to perform the
+same operation multiple times in different locations
+(completely different modules) in the source code unlike a
+lambda expression which it meant to be used in a localized
+region in the source code. A function object performs the same
+operation(executes the same code) but the result may vary based
+on whether or not the data stored in the object has changed (if
+the data has not changed the result of the operation will be
+the same). In the workshop, the spellchecker class defined a
+functor. The functor contained information of how to map
+misspelled words to correctly spelled words and held that
+information throughout its lifetime (while the object itself
+was still in scope). The public overloaded function call
+operator (public member function) simply performs the operation
+performs this mapping operation based on the information that
+was stored. It will do the same operation each time it is
+called since the data stored in the object has not been
+modified. Since multiple modules made use of the logic, the use
+a functor was an excellent choice.
+
+(2) The spellcheck’s custom one-argument constructor reports an
+error (generates an exception) if the file failed to open. If
+the file failed to open, an exception is thrown with the throw
+expression causing the run time to step out of the constructor
+in search of the caller that was nested within a try catch
+block. Run time will continue stepping out of functions until
+it steps out of a function call that is nested within a try
+catch block. Once the try block was found, the run time will
+start comparing the type of the catch block with the type that
+was thrown which was a message of type const char *. The first
+catch block that matches is the selected handler which can
+report the error to the user by printing the error messages
+passed with the throw expression. To achieve the same results
+without using exceptions to report that the file failed to open
+could be having the client be responsible for opening the file.
+If the client was able to successfully open the file, the
+client can pass the file object to the constructor. If the
+client was not able to successfully open the file, the client
+code can report an error to the user (if else construct in
+practice). 
+
+	(3) The Movie and Book classes contain very similar
+logic within both of the custom one-argument
+constructors. A possible way to avoid duplicating logic
+for both of the constructors is to create a templated
+helper function that accepts a variable amount of
+arguments each of any type, that is, a variadic
+template (therefore a variable amount of template
+parameters). This function will query the type of the
+argument and parse the next available field in the
+string passed to the function. The string parsing logic
+could vary between types which is why it is done first.
+This logic is repeated for each argument that was
+passed to this variadic template function. I attempted
+to implement this solution myself however, I was
+unsuccessful as I do not have enough knowledge about
+variadic templates to understand how to properly create
+this function.
+
+	(4) The classes Movie and Book require a
+default constructor. This is because although
+the custom constructor was used to create
+temporary objects which were either moved(move
+assigned) into the array or added to a
+collection, the static array itself when first
+defined and the resource that the collection
+class manages requires the default constructor
+to exist. When a statically allocated array is
+defined or when memory is allocated off the
+heap with the new expression to store instances
+of a class, the run time must invoke the
+default constructor for each element in the
+array to instantiate(construct) the newly
+allocated elements. 
+
+
+Quiz reflection
+
+I got 11/10

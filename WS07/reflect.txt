@@ -1,0 +1,91 @@
+// Name: Nicholas Defranco
+// Seneca Student ID: 106732183
+// Seneca email: ndefranco@myseneca.ca
+// Date of completion: Tuesday, November 12th, 2019
+//
+// I confirm that the content of this file is created by me,
+// 	with the exception of the parts provided to me by my professor.
+
+In this workshop, I learned about a file object’s binary access mode when 
+connecting to a stream. Binary access mode consists of reading and writing 
+raw data to and from a stream respectively. That is, any data read or 
+written to or from the stream does not perform any formatting(such as 
+precision) or conversion of types (such as how the extraction operator 
+converts a character string read from a buffer into an integral type). 
+A file open in binary access mode is not read or written to 
+with a record structure with field or record delimiters. This 
+means that the program itself must take responsibility for 
+understanding any structure the data may have. In the workshop, 
+I used the read member function of the istream class to be 
+able to read a specific amount of data at a time. Since no 
+formatting occurs, leading white space is not ignored. The white 
+space characters in the file were important as they were part of 
+the field. That was the main reason for using the read function.
+
+(1) In this workshop, The STL functions that I have used along with my 
+reasoning for using them include:
+- std::copy() (used in SongCollection::display())-> This STL algorithm was 
+used to copy, in this case insert, the data stored in each element (Song 
+object) within the vector, into an output stream with the use of a 
+ostream_iterator. This function was used primarily to test out the 
+ostream_iterator. Orignally I used a for_each algorithm.
+
+- std::accumulate()(used in SongCollection::display()) -> This STL algorithm 
+was used sum the total lengths of the songs. (Originally used a for_each
+algorithm but changed it to experiment).
+
+- std::copy_if() (used in SongCollection::getSongsForArtist())-> This STL 
+algorithm was used to copy the song objects from the container to a local 
+list container by inserting into the back of the container (using 
+back_inserter) only if that element met a specific condition. Since we were 
+returning a new container that will contain all the songs made by 
+an artist and not modifying the data member(container the 
+class in managing), we must copy the contents of one container to the other. 
+Therefore, std::copy_if() was used.
+
+- std::replace_if() (used in SongCollection::cleanAlbum())-> Since this 
+function only performed a replace operation only if a condition is true, 
+replace_if is the best choice.
+
+- std::sort() (used in SongCollection::sort)-> This STL algorithm was used 
+to sort the contents of the container by a specific field. I required a 
+sorting algorithm, therefore, this function was used.
+
+- std::any_of() (used in SongCollection::inCollection())-> This STL 
+algorithm was used to check if any elements satisfied the predicate. The 
+predicate being if an artist's name existed within the container, that is, if 
+any artist name field within any Song object is equal to the parameter, return 
+true.
+
+(2) The advantages of using STL algorithms over implementing the 
+functionality myself using iteration constructs include faster development 
+times due to not requiring to create the algorithm myself (not having to plan
+, debug logical error etc). Since the STL algorithm library contains many 
+common operations that can be performed on a container, I can simply make 
+use of that algorithm and not have to worry about any details the algorithm 
+may have.   The client code, in this case would be myself, can treat the 
+functions like a black box and assume that the function will work as intended
+. The STL library consists of very complex algorithms that would have 
+required a lot of testing during its development. Due to this, if I were to 
+attempt to reproduce the algorithm, it most likely will not be nearly as 
+efficient as the STL algorithm counterpart. Finally the STL algorithms, as 
+the name suggests, handles elements within a data structure in a generic 
+form allowing heavy reuse of code. They allow code reuse through the use of 
+iterators. This means that at any point in time, if I decide to change the 
+container that I have used, most of my logic that uses the container will 
+most likely not need to change.
+
+(3) A possible redesign to allow for compiler validation can be defining an 
+enumeration type (either a plain or scoped enumeration) where each symbolic 
+constant (or enumeration constant) represents an admissible sorting option 
+to the client. In the case of the workshop, we can have 3 constants, the 
+first being length, second being album, and the third being title. The 
+parameter list of the function would then be updated to accept only these 
+three symbolic constants (have the parameter be of the same enum type 
+defined before) instead of accepting an std::string. If the client code 
+misspells the symbolic constant or attempts to pass an entity of a different 
+type, the compiler will issue an error.
+
+Quiz reflection
+
+I got 11/10

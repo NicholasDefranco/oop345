@@ -1,0 +1,91 @@
+Name: Nicholas Defranco
+Seneca Student ID: 106732183
+Seneca email: ndefranco@myseneca.ca
+Date of completion: Tuesday, November 19th, 2019
+
+I confirm that the content of this file is created by me,
+	with the exception of the parts provided to me by my professor.
+
+In This workshop, I have learned about a smart pointer. A smart pointer is
+composed of a single resource (a component) which it either has complete
+ownership over a resource or shared ownership of a resource (smart pointers
+have a composition relationship). In other words, a smart pointer is a wrapper
+class for the built-in pointer type as the class is completely responsible for
+the region of memory(or resource) that the underlying built-in pointer type(The
+pointer is a data member of a smart pointer class) holds the address of. This
+means that a smart pointer is responsible for deallocating/destructing the
+resource it manages when it is necessary to do so. 
+
+There are two different smart pointer templates in the standard library:
+
+The std::unique_ptr<> template defines classes that facilitate complete
+ownership over a resource. Since the instance has complete ownership, the
+instance cannot invoke the copy constructor nor the copy assignment operator
+(that is, they are deleted members of the class).    The reason is because the
+copy operators would allow another instance of the same class to have(this is,
+share) the same resource which effectively pierces the idea of complete
+ownership. The move operators are admissible operations as they can be
+performed as moving gives/transfers ownership from one smart pointer to another
+and thus, not piercing the idea of complete ownership. 
+
+The std::shared_ptr<> template defines classes that facilitate shared ownership
+over a resource. A shared smart pointer shares its resource through copy
+operations(copy operations are permissible as shared smart pointers have shared
+ownership on a resource). A shared smart pointer that shares a resource with
+other smart pointers is also known as a reference-counted smart pointer. The
+reason for this is because a shared smart pointer must hold the amount of
+shared smart pointers currently pointing to the same resource as itself. This
+information is required upon a shared smart pointer’s destruction as the
+resource is only ever deallocated when the smart pointer that is about to be
+destructed is the last smart shared pointer pointing to that specific resource
+in memory.
+
+(1) In my solution for the mergeSmart() function, I have used a unique smart
+pointer. The advantage of a unique smart pointer over the raw pointer syntax is
+that regardless of the flow of control of the program, we can guarantee that
+the resource (dynamically allocated Product object) is deallocated whenever the
+smart pointer object itself goes out of scope. If the validate() member
+function throws an exception, the run time escapes the normal flow of the
+application and rather just simply unwinds the function call stack until it
+reaches a caller from a function within a try catch block. That is, control
+will return from the call to mergeSmart() before control reaches its
+terminating closing brace skipping code within its definition. When the stack
+unwinds from the mergeSmart() function, all objects of automatic storage
+duration allocated within are simply popped off the stack. Since the unique
+smart pointer itself was allocated off the stack, it too will be deallocated
+due to stack unwinding which invokes its destructor which in turn deallocates
+the dynamically allocated Product object (it’s owned resource) upon its own
+destruction. In short smart pointers in general allow for exception safety.
+
+(2) In the raw pointer solution, if the validate() member function threw an
+exception, the stack would unwinding process would deallocate all objects of
+automatic storage duration but not dynamic storage duration which causes an
+important issue that requires our attention. In the mergeRaw() function in the
+workshop, we store the address of a dynamically allocated Product object in a
+raw pointer. if the validate() member function were to throw an exception, the
+raw pointer will simply go out of scope due to stack unwinding skipping the
+delete expression required to deallocate the memory associated with the pointer
+as it has dynamic storage duration which ultimately causes a memory leak. In
+order to fix the memory leak, although not required by the workshops
+specifications, is to wrap the call to the validate() member function in a try
+catch block. The try catch block will allow the exception to be handled within
+the same scope as the raw pointer allowing the chosen exception handler to
+deallocate memory allocated to the raw pointer. A possible issue arises when
+more than one function in the application dynamically allocate an object of
+type Product and also subsequently call the validate() member function. For
+every occurrence of this logic the programmer is responsible to wrap the call
+to the validate() member function within a try catch in order to trap any
+possible memory leaks. Therefore, this solution is not viable as it allows for
+code redundancy which is a poor programming style. 
+
+Conversely, a unique smart pointer, as mentioned before in question one, will
+invoke its destructor when the smart pointer itself goes out of scope
+regardless of the flow of control of the program. Thus, with the unique smart
+pointer solution, we can omit the delete expression as well as the try catch
+block(not actually required by specifications) ultimately fixing the code
+redundancy issue presented with the raw pointer solution specified before.
+
+
+Quiz reflection
+
+I got 11/10

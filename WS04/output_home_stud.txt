@@ -1,0 +1,209 @@
+Script started on Sun 06 Oct 2019 06:10:05 PM EDT
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: data.txt
+--------------------------
+
+Reservations
+--------------------------
+Reservation RES-001:       John  <john@email.com>        Drinks on day 3 @ 5:00 for 2 people.
+Reservation RES-002:      David  <david@email.com>       Breakfast on day 4 @ 6:00 for 1 people.
+Reservation RES-003:       Sara  <sara@email.com>        Breakfast on day 5 @ 7:00 for 2 people.
+Reservation RES-004:        Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 people.
+Reservation RES-005:       John  <john@email.com>        Breakfast on day 4 @ 9:00 for 1 people.
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-007:       Mike  <mike@email.com>        Lunch on day 4 @ 11:00 for 4 people.
+Reservation RES-008:       Mike  <mike@email.com>        Lunch on day 5 @ 12:00 for 8 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+Reservation RES-010:      Donna  <donna@email.com>       Lunch on day 5 @ 14:00 for 5 people.
+Reservation RES-011:        Ana  <ana@email.com>         Lunch on day 4 @ 15:00 for 4 people.
+Reservation RES-012:       John  <john@email.com>        Drinks on day 5 @ 16:00 for 2 people.
+Reservation RES-013:       Sara  <sara@email.com>        Dinner on day 3 @ 17:00 for 6 people.
+Reservation RES-014:   Jennifer  <jenn@email.com>        Dinner on day 5 @ 18:00 for 6 people.
+Reservation RES-015:       Stan  <stan@email.com>        Dinner on day 4 @ 19:00 for 5 people.
+Reservation RES-016:      Chris  <chris@email.com>       Dinner on day 4 @ 20:00 for 3 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-018:      David  <david@email.com>       Drinks on day 5 @ 22:00 for 4 people.
+Reservation RES-019:      Chris  <chris@email.com>       Drinks on day 3 @ 23:00 for 1 people.
+Reservation RES-020:      Donna  <donna@email.com>       Drinks on day 4 @ 24:00 for 3 people.
+--------------------------
+
+R: Testing Constuctor
+==========================
+--------------------------
+Fancy Restaurant
+--------------------------
+Reservation RES-001:       John  <john@email.com>        Drinks on day 3 @ 5:00 for 2 people.
+Reservation RES-002:      David  <david@email.com>       Breakfast on day 4 @ 6:00 for 1 people.
+Reservation RES-003:       Sara  <sara@email.com>        Breakfast on day 5 @ 7:00 for 2 people.
+Reservation RES-004:        Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 people.
+Reservation RES-005:       John  <john@email.com>        Breakfast on day 4 @ 9:00 for 1 people.
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-007:       Mike  <mike@email.com>        Lunch on day 4 @ 11:00 for 4 people.
+Reservation RES-008:       Mike  <mike@email.com>        Lunch on day 5 @ 12:00 for 8 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+Reservation RES-010:      Donna  <donna@email.com>       Lunch on day 5 @ 14:00 for 5 people.
+Reservation RES-011:        Ana  <ana@email.com>         Lunch on day 4 @ 15:00 for 4 people.
+Reservation RES-012:       John  <john@email.com>        Drinks on day 5 @ 16:00 for 2 people.
+Reservation RES-013:       Sara  <sara@email.com>        Dinner on day 3 @ 17:00 for 6 people.
+Reservation RES-014:   Jennifer  <jenn@email.com>        Dinner on day 5 @ 18:00 for 6 people.
+Reservation RES-015:       Stan  <stan@email.com>        Dinner on day 4 @ 19:00 for 5 people.
+Reservation RES-016:      Chris  <chris@email.com>       Dinner on day 4 @ 20:00 for 3 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-018:      David  <david@email.com>       Drinks on day 5 @ 22:00 for 4 people.
+Reservation RES-019:      Chris  <chris@email.com>       Drinks on day 3 @ 23:00 for 1 people.
+Reservation RES-020:      Donna  <donna@email.com>       Drinks on day 4 @ 24:00 for 3 people.
+--------------------------
+==========================
+
+R: Testing Copy Constuctor
+==========================
+--------------------------
+Fancy Restaurant
+--------------------------
+Reservation RES-001:       John  <john@email.com>        Drinks on day 3 @ 5:00 for 2 people.
+Reservation RES-002:      David  <david@email.com>       Breakfast on day 4 @ 6:00 for 1 people.
+Reservation RES-003:       Sara  <sara@email.com>        Breakfast on day 5 @ 7:00 for 2 people.
+Reservation RES-004:        Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 people.
+Reservation RES-005:       John  <john@email.com>        Breakfast on day 4 @ 9:00 for 1 people.
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-007:       Mike  <mike@email.com>        Lunch on day 4 @ 11:00 for 4 people.
+Reservation RES-008:       Mike  <mike@email.com>        Lunch on day 5 @ 12:00 for 8 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+Reservation RES-010:      Donna  <donna@email.com>       Lunch on day 5 @ 14:00 for 5 people.
+Reservation RES-011:        Ana  <ana@email.com>         Lunch on day 4 @ 15:00 for 4 people.
+Reservation RES-012:       John  <john@email.com>        Drinks on day 5 @ 16:00 for 2 people.
+Reservation RES-013:       Sara  <sara@email.com>        Dinner on day 3 @ 17:00 for 6 people.
+Reservation RES-014:   Jennifer  <jenn@email.com>        Dinner on day 5 @ 18:00 for 6 people.
+Reservation RES-015:       Stan  <stan@email.com>        Dinner on day 4 @ 19:00 for 5 people.
+Reservation RES-016:      Chris  <chris@email.com>       Dinner on day 4 @ 20:00 for 3 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-018:      David  <david@email.com>       Drinks on day 5 @ 22:00 for 4 people.
+Reservation RES-019:      Chris  <chris@email.com>       Drinks on day 3 @ 23:00 for 1 people.
+Reservation RES-020:      Donna  <donna@email.com>       Drinks on day 4 @ 24:00 for 3 people.
+--------------------------
+--------------------------
+Fancy Restaurant
+--------------------------
+Reservation RES-001:       John  <john@email.com>        Drinks on day 3 @ 5:00 for 2 people.
+Reservation RES-002:      David  <david@email.com>       Breakfast on day 4 @ 6:00 for 1 people.
+Reservation RES-003:       Sara  <sara@email.com>        Breakfast on day 5 @ 7:00 for 2 people.
+Reservation RES-004:        Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 people.
+Reservation RES-005:       John  <john@email.com>        Breakfast on day 4 @ 9:00 for 1 people.
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-007:       Mike  <mike@email.com>        Lunch on day 4 @ 11:00 for 4 people.
+Reservation RES-008:       Mike  <mike@email.com>        Lunch on day 5 @ 12:00 for 8 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+Reservation RES-010:      Donna  <donna@email.com>       Lunch on day 5 @ 14:00 for 5 people.
+Reservation RES-011:        Ana  <ana@email.com>         Lunch on day 4 @ 15:00 for 4 people.
+Reservation RES-012:       John  <john@email.com>        Drinks on day 5 @ 16:00 for 2 people.
+Reservation RES-013:       Sara  <sara@email.com>        Dinner on day 3 @ 17:00 for 6 people.
+Reservation RES-014:   Jennifer  <jenn@email.com>        Dinner on day 5 @ 18:00 for 6 people.
+Reservation RES-015:       Stan  <stan@email.com>        Dinner on day 4 @ 19:00 for 5 people.
+Reservation RES-016:      Chris  <chris@email.com>       Dinner on day 4 @ 20:00 for 3 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-018:      David  <david@email.com>       Drinks on day 5 @ 22:00 for 4 people.
+Reservation RES-019:      Chris  <chris@email.com>       Drinks on day 3 @ 23:00 for 1 people.
+Reservation RES-020:      Donna  <donna@email.com>       Drinks on day 4 @ 24:00 for 3 people.
+--------------------------
+==========================
+
+R: Testing Move Constuctor
+==========================
+--------------------------
+Fancy Restaurant
+--------------------------
+The object is empty!
+--------------------------
+--------------------------
+Fancy Restaurant
+--------------------------
+Reservation RES-001:       John  <john@email.com>        Drinks on day 3 @ 5:00 for 2 people.
+Reservation RES-002:      David  <david@email.com>       Breakfast on day 4 @ 6:00 for 1 people.
+Reservation RES-003:       Sara  <sara@email.com>        Breakfast on day 5 @ 7:00 for 2 people.
+Reservation RES-004:        Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 people.
+Reservation RES-005:       John  <john@email.com>        Breakfast on day 4 @ 9:00 for 1 people.
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-007:       Mike  <mike@email.com>        Lunch on day 4 @ 11:00 for 4 people.
+Reservation RES-008:       Mike  <mike@email.com>        Lunch on day 5 @ 12:00 for 8 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+Reservation RES-010:      Donna  <donna@email.com>       Lunch on day 5 @ 14:00 for 5 people.
+Reservation RES-011:        Ana  <ana@email.com>         Lunch on day 4 @ 15:00 for 4 people.
+Reservation RES-012:       John  <john@email.com>        Drinks on day 5 @ 16:00 for 2 people.
+Reservation RES-013:       Sara  <sara@email.com>        Dinner on day 3 @ 17:00 for 6 people.
+Reservation RES-014:   Jennifer  <jenn@email.com>        Dinner on day 5 @ 18:00 for 6 people.
+Reservation RES-015:       Stan  <stan@email.com>        Dinner on day 4 @ 19:00 for 5 people.
+Reservation RES-016:      Chris  <chris@email.com>       Dinner on day 4 @ 20:00 for 3 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-018:      David  <david@email.com>       Drinks on day 5 @ 22:00 for 4 people.
+Reservation RES-019:      Chris  <chris@email.com>       Drinks on day 3 @ 23:00 for 1 people.
+Reservation RES-020:      Donna  <donna@email.com>       Drinks on day 4 @ 24:00 for 3 people.
+--------------------------
+==========================
+
+CS: Testing Constuctor
+==========================
+--------------------------
+Confirmations to Send
+--------------------------
+The object is empty!
+--------------------------
+==========================
+
+CS: Testing Operators
+==========================
+--------------------------
+Confirmations to Send
+--------------------------
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+Reservation RES-009:        Dan  <dan@email.com>         Lunch on day 3 @ 13:00 for 2 people.
+--------------------------
+--------------------------
+Confirmations to Send
+--------------------------
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+--------------------------
+==========================
+
+CS: Testing Copy Constuctor
+==========================
+--------------------------
+Confirmations to Send
+--------------------------
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+--------------------------
+--------------------------
+Confirmations to Send
+--------------------------
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+--------------------------
+==========================
+
+CS: Testing Move Constuctor
+==========================
+--------------------------
+Confirmations to Send
+--------------------------
+The object is empty!
+--------------------------
+--------------------------
+Confirmations to Send
+--------------------------
+Reservation RES-006:    Vanessa  <vanessa@email.com>     Drinks on day 3 @ 10:00 for 2 people.
+Reservation RES-017:    Vanessa  <vanessa@email.com>     Dinner on day 4 @ 21:00 for 4 people.
+--------------------------
+==========================
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sun 06 Oct 2019 06:10:05 PM EDT

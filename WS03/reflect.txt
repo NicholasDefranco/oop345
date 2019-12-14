@@ -1,0 +1,74 @@
+Name: Nicholas Defranco
+Seneca Student ID: 106732183
+Seneca email: ndefranco@myseneca.ca
+Date of completion: Tuesday, October 1st, 2019
+
+I confirm that the content of this file is created by me,
+  with the exception of the parts provided to me by my professor.
+
+In general, templates allow the programmer to easily reuse code. Inside the
+definition of a template class or function contains logic using ambiguous
+types, that is, generic types. These generic types can be used in combination
+with one another or in combination with other known types. The compiler creates
+definitions as they are needed based on how the client has called the function.
+The compiler replaces the generic types with types that were explicitly
+specified by the client. As the compiler is creating a definition, the compiler
+performs its type checking procedure(s) to ensure all created expressions and
+operations performed within them are properly created(well-formed). If the
+compiler spots an expression that was not properly created (ill-formed) given
+the types, the compiler will report an error.
+
+In this workshop, I learned how to create a class template. A class template
+consists of a class template header and the class template definition. The
+class template header consists of the template keyword and a parameter list.
+Similar to a function’s parameter list, every parameter in a template has an
+identifier associated with it. When defining a class (and member functions
+within), we refer to the template types using their identifier. At compilation
+time, the compiler will generate required concrete definitions of the class
+based on the template definitions. During this process, all template parameter
+identifiers will be replaced with the specified types received by the client
+when the client creates an instance the class. The compiler creates a new
+concrete definition of the class for every differing template parameter list. 
+
+(1) However, there are instances where the logic provided in a template
+definition contains operations that would only work on certain types. This is
+due to the the fact that certain types may create ill-formed expressions as
+different types allow for different operations. To include types that would
+normally be inadmissible by the compiler, the programmer can include a template
+specialization. A template specialization is a separate definition for the same
+identifier(function, class, variable name) that explicitly declares the types
+in the body of the template (and parameter list if it is a function). An
+example of a template specialization in this workshop is the sum member
+function. The sum function simply returns the sum of the value in the current
+object and the value received in the parameter list. This function works with
+many types. However, in this workshop, the programmer needed to create a way to
+allow the type std::string so that it can be used properly based on its
+properties. std::string objects concatenate with one another when added
+together. The issue with just simply adding them together is that when the
+returned string is printed to the screen, the two strings will be attached in
+such a way making it unreadable. Therefore, a specialization was required to
+space out the strings as they were concatenated to allow them to be shown to
+the user in a readable format.
+
+(2) Since certain types can only be as assigned certain values, we cannot
+directly initialize the class members. The initial value for the variable must
+be specialized for every type that is planned to be used that can only store
+specific values. For example, it is illegal to store the value of zero in a
+std::string type.
+
+(3) Class variables are defined outside the class definition because class
+variables do not belong to any specific instance of the class. Rather it
+resides in the data segment within RAM. Only data members that belong to
+specific instances of the class can be defined within the class. The definition
+outside the class ensures that there is only one definition for the class
+variable as it should only appear once the data segment. The statement:
+
+static type identifier;
+
+in the class is a declaration, not a definition. The entity can be declared
+many times (it will be re-declared every time the class is instantiated) but an
+entity can only be defined once due to the one definition rule. Hence, the
+reasoning behind the definition outside the class.
+
+Quiz reflection 
+I got 11/10

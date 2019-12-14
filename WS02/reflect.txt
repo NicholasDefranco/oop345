@@ -1,0 +1,52 @@
+Name: Nicholas Defranco
+Seneca Student ID: 106732183
+Seneca email: ndefranco@myseneca.ca
+Date of completion: Tuesday, Spetember 24th, 2019
+
+I confirm that the content of this file is created by me,
+  with the exception of the parts provided to me by my professor.
+
+	(What move operators are) In this workshop, I learned how to declare 
+and define the move operators for a class.  The move operators are special 
+member functions in the class. There are two move operators, the move-
+constructor and the move-assignment operator. The move constructor is 
+invoked when a newly defined object is initialized to a object that is about 
+to go out of scope. The move-assignment operator is invoked when an existing 
+object is assigned to an object that is about to go out of scope. Both move 
+operators receive the right operand as a rvalue reference. An rvalue is an 
+object that is about to go out of scope, a temporary object or to a value 
+that does not have a memory location in RAM (“A value not associated with an 
+object” (szalwinski, 2017), as it is known as in the notes). 
+
+	(How it’s done) Move operators are used when an object containing 
+useful information is about to go out of scope. In such case, The contents 
+of the rvalue object (right operand) will be simply “moved” to the lvalue (
+left operand, which is also the current object). To move contents of an 
+object, we first deallocate any memory associated with pointers in the left 
+operand, then we simply shallow copy values of the variables (which includes 
+pointers) from the right operand data members to the left operand’s 
+corresponding data member. Once the move process has completed, the right 
+operand’s data members are set to a default value. 
+
+Note: When defining the move assignment operator, it is also necessary to 
+check for self assignment and return a reference to the left operand (the 
+current object).
+
+	(1, How efficient are they?) If we were to perform a deep copy, as 
+we do in copy operators, we could be copying a large amount of elements 
+pointed to by the resource instance pointers. This is very time-consuming 
+process and should only ever be done when it is absolutely required. Shallow 
+copying pointers, however, only involves one copy operation making it 
+extremely efficient especially when a resource consists of many elements. 
+This is the reason for the significant time difference between the copy and 
+move operators. 
+
+	(Localizing logic) The logic between the move constructor and move 
+assignment operator are very similar. Therefore, similar to the copy 
+operators, we can localize the logic within the move assignment operator and 
+have the move constructor call the move assignment operator.
+
+
+Quiz reflection
+
+I got 11/10.

@@ -1,0 +1,48 @@
+Script started on Sun 29 Sep 2019 10:42:07 AM EDT
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: products.txt
+  3: sales.txt
+--------------------------
+
+Individual Index Entries
+--------------------------
+Grocerries  : tomatoes
+Electronics : computer
+Tools       : hammer
+Grocerries  : lettuce
+Grocerries  : potatoes
+Electronics : Multimedia_Player
+Electronics : HDD
+Grocerries  : meat
+Tools       : jigsaw
+
+Collated Index Entries
+--------------------------
+      Tools: hammer, jigsaw
+ Grocerries: tomatoes, lettuce, potatoes, meat
+ Electrnics: 
+Electronics: computer, Multimedia_Player, HDD
+
+Detail Ticket Sales
+--------------------------
+Student : 25
+Adult   : 13
+Student : 12
+Adult   : 6
+Student : 5
+Adult   : 15
+
+Summary of Ticket Sales
+--------------------------
+Student Tickets =   86.10
+Adult Tickets   =  110.50
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sun 29 Sep 2019 10:42:07 AM EDT
