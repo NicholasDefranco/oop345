@@ -1,0 +1,38 @@
+There's not much to say that already hasn't been said about this assignment. 
+(instructions are ambigous, why are we focusing on string parsing so much!? 
+etc.)
+
+That is except for one thing that I believe that no one has mentioned. It is 
+the fact that the assignment really didn't use anything we have learned in the
+second half of the semester. I found this really odd considering as you have 
+said before, the material we learn after the midterm is more difficult than 
+the material we learned before the midterm (which is known to be already very
+difficult). I was honestly suprised by this. The main reason why I started the 
+milestones extremely early was for studying purposes and was hoping to learn 
+future concepts which will ultimatly help me understand the concepts better.
+I just didn't get that from this project. I still feel that haven't fully 
+grasped concepts like: multithreading, multiple inheritance, smart pointers. 
+The reason for my concern is that we are going to be tested on these concepts 
+on the exam and without and practice problems on these concepts (or many
+practice problems), I will not feel prepared for the exam.
+
+I also want to say that I'm really curious to know how the solution code 
+retrieved the first task in the assembly line. This mini problem confused the
+heck out of everyone.
+
+
+I put comments in my code to explain myself where I felt it was required. 
+There are slight variations of solving the problem specifically in MS3 with
+the functions: moveTask() and getCompleted() that I found as I was 
+experimenting as well as when I was helping others. What I have submitted was
+what I believe what the instructions were trying to say. The main idea of my
+logic is basically following one of your responses to a fellow student on slack
+which is essentially, the getCompleted function is only ever called on the last
+task. You suggested to have moveTask() only ever return true if the current 
+task is the last task on the assemblyline and has a completed order on the 
+back of its deque. Thus, if moveTask() returns true, call getCompleted().
+
+I hope it's correct
+
+
+P.S. Nathan is a god
