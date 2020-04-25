@@ -1,0 +1,38 @@
+Script started on Sun 20 Oct 2019 04:14:28 PM EDT
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line: ms1 Inventory1.dat Inventory2.dat
+
+=======================
+= Inventory (summary) =
+=======================
+CPU          [123456]
+Memory       [654321]
+GPU          [056789]
+SSD          [987654]
+Power Supply [147852]
+
+=======================
+=  Inventory (full)   =
+=======================
+CPU          [123456] Quantity: 5            Description: Central Processing Unit
+Memory       [654321] Quantity: 10           Description: Basic Flash Memory
+GPU          [056789] Quantity: 7            Description: General Porcessing Unit
+SSD          [987654] Quantity: 5            Description: Solid State Drive
+Power Supply [147852] Quantity: 20           Description: Basic AC Power Supply
+
+=======================
+=  Manual Validation  =
+=======================
+getName(): CPU
+getSerialNumber(): 123456
+getSerialNumber(): 123457
+getQuantity(): 5
+getQuantity(): 4
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sun 20 Oct 2019 04:14:28 PM EDT
