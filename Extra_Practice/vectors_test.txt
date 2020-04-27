@@ -1,0 +1,43 @@
+Q.1 
+Using "One Definition Rule"
+array of int 16 , 2, 27, 99, 100, 0 , 55, 3, 4, 90,8 
+named array1
+
+
+
+Q.2 
+Create vector of int 
+initialize it with content of array1 
+named vect1 
+*you should be able to do this in one line
+
+Q.3
+Create vector of int 
+named vect2
+
+Q.4
+Push value of 500 into vect1
+
+Q.5
+Using iteration print content of vect1 
+
+Q.6
+print content of vect1 
+*DO NOT USE MANUAL LOOPS*
+
+Q.7
+copy contents of vect1 into vect 2
+
+Q.8 how many numbers in vect1 > 50 && < 150
+*DO NOT USE MANUAL LOOPS*
+
+Q.9
+average of numbers in vect2 
+> 20 && < 99 
+*DO NOT USE MANUAL LOOPS*
+
+
+
+
+
+
